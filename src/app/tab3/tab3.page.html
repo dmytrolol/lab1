@@ -1,0 +1,35 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Завдання №3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Згенерувати матрицю розміром NxN. Виокремити за допомогою кольору усі
+        непарні від’ємні елементи більші за -10, якщо кількість таких елементів
+        більше за 5.
+      </p>
+
+      <ion-item>
+        <ion-input
+          label="Розмір матриці (N):"
+          labelPLacement="stacked"
+          type="number"
+          id="n"
+          value="5"
+          #InputN
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="generateMatrix(InputN.value)">
+        Згенерувати
+      </ion-button>
+
+      <div [innerHTML]="matrixText"></div>
+      <!-- Просто без pipe -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

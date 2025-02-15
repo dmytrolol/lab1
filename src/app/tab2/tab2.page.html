@@ -1,0 +1,47 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Завдання №2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Знайдіть кількість парних чисел, які при діленні на 3 дають в остачі 2
+        на заданому проміжку чисел [a, b]. Потрібно вивести як самі числа, так і
+        результати обрахунку.
+      </p>
+      <ion-item>
+        <ion-input
+          label="Перше число (a):"
+          labelPLacement="stacked"
+          type="number"
+          id="a"
+          value="1"
+          #Inputa
+        >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="Друге число (b):"
+          labelPLacement="stacked"
+          type="number"
+          id="b"
+          value="10"
+          #Inputb
+        >
+        </ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="calculate(Inputa.value, Inputb.value)"
+        >Розрахунок</ion-button
+      >
+      <ion-item>
+        <p>Знайдені числа: {{ numbersList }}</p>
+      </ion-item>
+      <ion-item>
+        <p>Кількість таких чисел: {{ count }}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
