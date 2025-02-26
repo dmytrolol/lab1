@@ -3,8 +3,8 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent,
   IonButtons,
+  IonMenuButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -12,7 +12,7 @@ import {
   templateUrl: './my-header.component.html',
   styleUrls: ['./my-header.component.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButtons],
+  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonMenuButton],
 })
 export class MyHeaderComponent implements OnInit {
   @Input() name: string = 'Лабораторні роботи';
