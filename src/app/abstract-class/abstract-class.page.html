@@ -1,0 +1,53 @@
+<app-my-header name="Лабораторна робота №3"></app-my-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Завдання</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Завдання 1. Скласти програму з абстрактним батьківським класом і двома
+        об'єктами – нащадками. Реалізувати циклічне виведення параметрів
+        об'єктів, використовуючи поліморфний контейнер - масив об'єктів базового
+        класу (кількість об'єктів >= 5).
+      </p>
+      <p>
+        Завдання 2. Виконати обрахунки відповідно до варіанту: Знайти книги
+        кожного жанру з найменшою кількістю сторінок.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Виведення всіх книг -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Список книг</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <!-- <ion-item *ngFor="let book of books" {{ book.show() }}>
+         <ion-label>
+          <h2>Назва: {{ book.title }}</h2>
+          <p>Автор: {{ book.author }}</p>
+          <p>Сторінок: {{ book.pages }}</p>
+          <p>{{ book.type }}: {{ book.parameter }}</p>
+        </ion-label> 
+      </ion-item> -->
+      <!-- <ion-item *ngFor="let book of books"> {{ book.show() }} </ion-item> -->
+      <ion-item *ngFor="let book of books">
+        <ion-label [innerHTML]="book.show()"></ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-button (click)="findMinBooks()">Знайти мінімальні</ion-button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Книги з найменшою кількістю сторінок</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item *ngFor="let book of minBooks">
+        <ion-label [innerHTML]="book.show()"></ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
