@@ -12,21 +12,21 @@ export class Novel extends Book {
     super(title, author, pages, type, parameter);
   }
   show() {
-    // return (
-    //   'Назва: ' +
-    //   this.title +
-    //   ', автор: ' +
-    //   this.author +
-    //   ', кількість сторінок: ' +
-    //   this.pages +
-    //   ' жанр: ' +
-    //   this.parameter
-    // );
-    return `
-      <h2>${this.title}</h2>
-      <p>Автор: ${this.author}</p>
-      <p>Сторінок: ${this.pages}</p>
-      <p>Жанр: ${this.parameter}</p>
-    `;
+    return (
+      'Назва: ' +
+      this.title +
+      ', автор: ' +
+      this.author +
+      ', кількість сторінок: ' +
+      this.pages +
+      ' жанр: ' +
+      this.parameter
+    );
+    // return `
+    //   <h2>${this.title}</h2>
+    //   <p>Автор: ${this.author}</p>
+    //   <p>Сторінок: ${this.pages}</p>
+    //   <p>Жанр: ${this.parameter}</p>
+    // `;
   }
 }

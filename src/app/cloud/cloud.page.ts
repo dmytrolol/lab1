@@ -6,7 +6,6 @@ import {
   ElementRef,
   asNativeElements,
 } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; // Імпортуємо HTTP-клієнт
 import { Chart, registerables } from 'chart.js/auto';
 
 import { Lesson } from '../class/schedule/lesson';
@@ -59,7 +58,7 @@ export class CloudPage implements OnInit {
   apiUrl = 'https://api.jsonbin.io/v3/b/67bdc68bacd3cb34a8f01c18';
   lineChart: any;
 
-  constructor(private http: HttpClient) {
+  constructor() {
     Chart.register(...registerables);
   }
 

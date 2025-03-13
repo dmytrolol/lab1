@@ -1,4 +1,4 @@
-export type BookName = 'Роман' | 'Наукова книга';
+export type BookName = 'Роман' | 'Наукова книга' | 'Хоррор';
 
 export type BookNameMap = {
   [key: string]: BookName;
@@ -8,4 +8,5 @@ export type BookNameMap = {
 export const BooksNameMap: BookNameMap = {
   Novel: 'Роман',
   ScientificBook: 'Наукова книга',
+  Horror: 'Хоррор',
 };

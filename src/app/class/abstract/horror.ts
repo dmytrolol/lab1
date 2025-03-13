@@ -1,11 +1,10 @@
 import { Book } from './book';
 
-export class ScientificBook extends Book {
+export class Horror extends Book {
   constructor(
     override title: string,
     override author: string,
     override pages: number,
-    // override field: string
     override type: string,
     override parameter: string
   ) {
@@ -19,14 +18,8 @@ export class ScientificBook extends Book {
       this.author +
       ', кількість сторінок: ' +
       this.pages +
-      ' галузь знань: ' +
+      ' піджанр: ' +
       this.parameter
     );
-    //   return `
-    //   <h2>${this.title}</h2>
-    //   <p>Автор: ${this.author}</p>
-    //   <p>Сторінок: ${this.pages}</p>
-    //   <p>Галузь знань: ${this.parameter}</p>
-    // `;
   }
 }
