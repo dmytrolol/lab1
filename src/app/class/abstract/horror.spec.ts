@@ -39,9 +39,8 @@ describe('Horror book testing', () => {
   //   it('Пошук книг кожного жанру з найменшою кількістю сторінок'), () => {
 
   //   }
-  it('Розрахунок кількості сторінок'),
-    () => {
-      let n = horror.pages;
-      expect(horror.getPages()).toBe(n);
-    };
+  it('Розрахунок кількості сторінок', () => {
+    let n = horror.pages;
+    expect(horror.getPages()).toBe(n);
+  });
 });

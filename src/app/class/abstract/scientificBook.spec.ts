@@ -40,9 +40,8 @@ describe('scientificBook book testing', () => {
   //   it('Пошук книг кожного жанру з найменшою кількістю сторінок'), () => {
 
   //   }
-  it('Розрахунок кількості сторінок'),
-    () => {
-      let n = scientificBook.pages;
-      expect(scientificBook.getPages()).toBe(n);
-    };
+  it('Розрахунок кількості сторінок', () => {
+    let n = scientificBook.pages;
+    expect(scientificBook.getPages()).toBe(n);
+  });
 });
