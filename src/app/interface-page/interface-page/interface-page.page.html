@@ -1,0 +1,15 @@
+<app-my-header name="Лабораторна робота №6"></app-my-header>
+<ion-content [fullscreen]="true">
+  <h1 class="salon-title">Автосалон</h1>
+  <ion-card *ngFor="let vehicle of vehicles" class="course-card">
+    <ion-card-header class="cheader">
+      <ion-card-title
+        >{{ vehicle.getBrand() }} {{ vehicle.getModel() }} {{ vehicle.getYear()
+        }}</ion-card-title
+      >
+      <ion-card-subtitle>{{ vehicle.getType() }}</ion-card-subtitle>
+      <ion-card-title>{{ vehicle.getPrice() }}$</ion-card-title>
+    </ion-card-header>
+    <ion-button>Купити</ion-button>
+  </ion-card>
+</ion-content>
